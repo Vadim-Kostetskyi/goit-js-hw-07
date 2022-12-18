@@ -16,5 +16,3 @@ const galeryElement = galleryItems
 galeryBook.insertAdjacentHTML("afterbegin", galeryElement);
 
 const gallery = new SimpleLightbox(".gallery a");
-
-galeryBook.addEventListener("click", imageClick);
