@@ -1,5 +1,4 @@
 import { galleryItems } from "./gallery-items.js";
-console.log(galleryItems);
 
 const galeryBook = document.querySelector(".gallery");
 
@@ -16,14 +15,6 @@ const galeryElement = galleryItems
   .join("");
 galeryBook.insertAdjacentHTML("afterbegin", galeryElement);
 
-const imageClick = (event) => {
-  event.preventDefault();
-  console.log(event.target);
-
-  if (event.target.nodeName !== "IMG") {
-    return;
-  }
-  const gallery = new SimpleLightbox(".gallery a");
-};
+const gallery = new SimpleLightbox(".gallery a");
 
 galeryBook.addEventListener("click", imageClick);
